@@ -50,12 +50,51 @@ body {
     background-color: #4674ef;
    
 }
-#text-content{
+.text-content{
     margin-left: auto;
     margin-right: auto;
-    max-width: 80%
+    max-width: 90%
 }
 
-.fix-height-230{
+.center-cropped
+{
     height: 230px;
+    overflow: hidden;
+    position: relative;
 }
+.center-cropped img {
+    position: absolute;
+    margin: auto; 
+    min-height: 100%;
+    min-width: 100%;
+
+    /* For the following settings we set 100%, but it can be higher if needed 
+    See the answer's update */
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+}
+
+.column-padding{
+    padding:3px;
+}
+
+.center-cropped span{
+
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 90%;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #000;
+    padding: .5rem;
+    background-color: #313131;
+    background-color: rgba(0,0,0,0.35);
+    position: absolute;
+    z-index: 2;
+}
+
+/* Set the image to fill its parent and make transparent */
